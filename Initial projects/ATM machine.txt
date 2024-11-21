@@ -1,0 +1,52 @@
+print("ENTER TO MY ATM")
+restart = "yes"
+chances = 3
+balance = 25000
+while chances>=0:
+      pin = int(input("PLEASE ENTER YOUR 4 DIGIT VALID PIN: "))
+      if pin == (1234):
+            print("YOUR PIN IS CORRECT")
+            while restart not in ("n","N",'no','NO'):
+                  print("PLEASE PRESS 1 FOR YOUR BALANCE: ")
+                  print("PLEASE PRESS 2 TO WITHDRAW MONEY: ")
+                  print("PLEASE PRESS 3 TO ADD MONEY TO ACCOUNT: ")
+                  print("PLEASE PRESS 4 TO RETURN CARD: ")
+                  option = int(input("WHAT WOULD YOU LIKE TO CHOOSE? "))
+                  if option == 1:
+                        print("YOUR ACCOUNT BALANCE IS: ",balance)
+                        restart = input("WOULD YOU LIKE TO GO BACK? ")
+                        if restart in("n","N",'no','NO'):
+                              print("THANK YOU VISIT AGAIN")
+                              break
+                  elif option == 2:
+                         
+                         withdraw = int(input("HOW MUCH MONEY WOULD YOU LIKE TO WITHDRAW: "))
+                         if withdraw in [100,200,500,2000]:
+                             balance=balance-withdraw
+                             print("YOUR BALANCE IS: ",balance)
+                             restart = input("WOULD YOU LIKE TO GO BACK? ")
+                             if restart in("n","N",'no','NO'):
+                                  print("THANK YOU VISIT AGAIN")
+                                  break
+                                    
+                  elif option == 3:
+                      pay = int(input("ENTER THE AMOUNT OF MONEY YOU WANT TO DEPOSIT IN ACCOUNT: "))
+                      balance = balance+pay
+                      print("YOUR NEW BALANCE IS: ",balance)
+                      restart = input("WOULD YOU LIKE TO GO BACK? ")
+                      if restart in("n","N",'no','NO'):
+                           print("THANK YOU VISIT AGAIN")
+                           break
+                  elif option == 4:
+                              print("PLEASE WAIT TILL WE RETURN YOUR CARD: ")
+                              print("THANK YOU VISIT AGAIN")
+                              break
+                  else:
+                              print("ENTER A VALID 4 DIGIT PIN: ")
+                              restart = "yes"
+      elif pin != (1234):
+                        print("INCORRECT PIN")
+                        chances = chances-1
+                        if chances == 0:
+                              print("NO MORE TRIES")
+                              break
