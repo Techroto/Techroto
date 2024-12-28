@@ -1,5 +1,4 @@
 #PROJECT ALARM CLOCK 
-#hello
 
 import datetime
 import os
