@@ -1,4 +1,5 @@
 #PROJECT ALARM CLOCK 
+#hello
 
 import datetime
 import os
@@ -8,7 +9,7 @@ import webbrowser
 import winsound
 freq = 2000;
 dur = 1000;
-def check_alarm_input(alarm_time):
+def check_alarm_inputgit (alarm_time):
     """Checks to see if the user has entered in a valid alarm time"""
     if len(alarm_time) == 1:
         if alarm_time[0] < 24 and alarm_time[0] >= 0:
