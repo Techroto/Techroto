@@ -1,6 +1,4 @@
-#PROJECT ALARM CLOCK 
-#text file 
-
+#PROJECT ALARM CLOCK  
 import datetime
 import os
 import time
